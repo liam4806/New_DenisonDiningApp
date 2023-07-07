@@ -4,6 +4,7 @@ import 'package:helloworld/carouselslidermain.dart';
 import 'package:helloworld/homebutton.dart';
 import 'package:helloworld/subtitlehome.dart';
 import 'package:helloworld/bottomdenisonlogo.dart';
+import 'package:helloworld/drawerdescription.dart';
 
 void main() => runApp(const MyApp());
 
@@ -34,7 +35,10 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, //Color.fromRGBO(240, 245, 249, 100),
+      backgroundColor: Colors.white,
+      /******************/
+      //     AppBar
+      /*****************/
       appBar: AppBar(
         shape: const Border(
           bottom: BorderSide(
@@ -54,35 +58,24 @@ class MyHomePage extends StatelessWidget {
             fontFamily: 'merri',
             fontWeight: FontWeight.bold,
             fontSize: 25,
-          ), /*Image.asset(
-              'assets/images/denison.png',
-              fit: BoxFit.contain,
-              alignment: Alignment.center,
-            ),*/
-        ),
-
-        /*Text(
-          title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Colors.black,
-            fontFamily: 'merri',
-            fontWeight: FontWeight.bold,
-            fontSize: 25,
           ),
-        ),*/
-        //Appbar rightmost button
-        actions: const [
-          Icon(
-            CupertinoIcons.person_solid,
-            //**********************************/
-            //NEED AUTHENTIFICATION NEAR FUTURE
-            //*********************************/
-            color: Colors.black,
-          )
-        ],
+        ),
         backgroundColor: Colors.grey[50],
+        //AppBar icon theme color setting
+        iconTheme: const IconThemeData(
+          color: Color(0xffb71c1c),
+        ),
       ),
+      //right drawer menu
+      endDrawer: Drawer(
+        child: Container(
+          alignment: Alignment.center,
+          child: Description(),
+        ),
+      ),
+      /******************/
+      //     BODY
+      /*****************/
       body: Center(
         child: SingleChildScrollView(
           child: Column(
