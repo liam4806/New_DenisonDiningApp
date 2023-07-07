@@ -20,8 +20,14 @@ class _MenuWebViewState extends State<MenuWebView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          shape: const Border(
+            bottom: BorderSide(
+              color: Color(0xffb71c1c),
+              width: 2,
+            ),
+          ),
           iconTheme: const IconThemeData(
-            color: Colors.black,
+            color: Color(0xffb71c1c),
           ),
           backgroundColor: Colors.grey[50],
           elevation: 2,
@@ -29,8 +35,8 @@ class _MenuWebViewState extends State<MenuWebView> {
             widget.appbartitle,
             textAlign: TextAlign.center,
             style: const TextStyle(
+              color: Color(0xffb71c1c),
               fontFamily: 'merri',
-              color: Colors.black,
               fontWeight: FontWeight.bold,
               fontSize: 25,
             ),
