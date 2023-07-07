@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // Application name
       title: 'Denison Dining App',
       //App theme control by device system
@@ -36,14 +37,25 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Colors.white, //Color.fromRGBO(240, 245, 249, 100),
       appBar: AppBar(
         elevation: 2,
-        leading: const Icon(
-          //Appbar leftmost button
-          /* NEED SIDE MENU BAR TO BE UPDATED */
-          CupertinoIcons.line_horizontal_3,
-          color: Colors.black,
-        ),
+        automaticallyImplyLeading: false,
+        centerTitle: false,
         // The title text which will be shown on the action bar
         title: Text(
+          title,
+          //textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: Colors.black,
+            fontFamily: 'merri',
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          ), /*Image.asset(
+              'assets/images/denison.png',
+              fit: BoxFit.contain,
+              alignment: Alignment.center,
+            ),*/
+        ),
+
+        /*Text(
           title,
           textAlign: TextAlign.center,
           style: const TextStyle(
@@ -52,8 +64,7 @@ class MyHomePage extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 25,
           ),
-        ),
-        centerTitle: true,
+        ),*/
         //Appbar rightmost button
         actions: const [
           Icon(
