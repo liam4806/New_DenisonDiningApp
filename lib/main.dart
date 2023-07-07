@@ -36,7 +36,13 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white, //Color.fromRGBO(240, 245, 249, 100),
       appBar: AppBar(
-        elevation: 2,
+        shape: const Border(
+          bottom: BorderSide(
+            color: Color(0xffb71c1c),
+            width: 2,
+          ),
+        ),
+        elevation: 4,
         automaticallyImplyLeading: false,
         centerTitle: false,
         // The title text which will be shown on the action bar
@@ -44,7 +50,7 @@ class MyHomePage extends StatelessWidget {
           title,
           //textAlign: TextAlign.center,
           style: const TextStyle(
-            color: Colors.black,
+            color: Color(0xffb71c1c),
             fontFamily: 'merri',
             fontWeight: FontWeight.bold,
             fontSize: 25,
