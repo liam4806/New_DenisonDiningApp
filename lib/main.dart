@@ -4,12 +4,11 @@ import 'package:helloworld/carouselslidermain.dart';
 import 'package:helloworld/homebutton.dart';
 import 'package:helloworld/subtitlehome.dart';
 import 'package:helloworld/bottomdenisonlogo.dart';
-<<<<<<< HEAD
+
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-=======
+
 import 'package:helloworld/drawerdescription.dart';
->>>>>>> ed7f6d68fea2b6c86edcd5753741bc43b5036c99
 
 import 'firestoreApi.dart';
 
