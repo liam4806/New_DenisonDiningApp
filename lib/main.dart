@@ -1,12 +1,30 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:helloworld/carouselslidermain.dart';
 import 'package:helloworld/homebutton.dart';
 import 'package:helloworld/subtitlehome.dart';
 import 'package:helloworld/bottomdenisonlogo.dart';
+
+import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 import 'package:helloworld/drawerdescription.dart';
 
-void main() => runApp(const MyApp());
+import 'firestore_api.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(); // waits for database connection
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => DbtoDart()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -70,7 +88,7 @@ class MyHomePage extends StatelessWidget {
       endDrawer: Drawer(
         child: Container(
           alignment: Alignment.center,
-          child: Description(),
+          child: const Description(),
         ),
       ),
       /******************/
@@ -79,43 +97,43 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            children: [
-              const CarouselSilderMain(),
-              const SubTitleHome(
+            children: const [
+              CarouselSilderMain(),
+              SubTitleHome(
                 stitle: 'Today\'s Menu',
               ),
-              const HomeButton(
+              HomeButton(
                 buttontitle: 'Curtis Dining Hall',
                 buttonsubtitle: 'Healthy, Seasonal Comfort',
                 buttonimage: 'assets/images/Curtis.jpg',
                 dininghall:
                     'https://denison.cafebonappetit.com/cafe/curtis-cafe/',
               ),
-              const HomeButton(
+              HomeButton(
                 buttontitle: 'Huffman Dining Hall',
                 buttonsubtitle: 'Fresh, Sustainable, Variety',
                 buttonimage: 'assets/images/Huffman.jpg',
                 dininghall:
                     'https://denison.cafebonappetit.com/cafe/huffman-cafe/',
               ),
-              const HomeButton(
+              HomeButton(
                 buttontitle: 'Slayters Market',
                 buttonsubtitle: 'Convenient, House made,\nBarista made Coffee',
                 buttonimage: 'assets/images/slayter.jpg',
                 dininghall:
                     'https://denison.cafebonappetit.com/cafe/slayter-market/',
               ),
-              const SubTitleHome(
+              SubTitleHome(
                 stitle: 'Specials',
               ),
-              const HomeButton(
+              HomeButton(
                 buttontitle: 'Silverstein',
                 buttonsubtitle: 'Pizza, Sandwich,\nFresh ingredients',
                 buttonimage: 'assets/images/silverstein.jpg',
                 dininghall:
                     'https://denison.cafebonappetit.com/cafe/silverstein/',
               ),
-              const HomeButton(
+              HomeButton(
                 buttontitle: 'The Nest at the Roost',
                 buttonsubtitle:
                     'Student-driven, Flatbreads, \nSandwich, Desserts',
@@ -123,7 +141,7 @@ class MyHomePage extends StatelessWidget {
                 dininghall:
                     'https://denison.cafebonappetit.com/cafe/the-roost/',
               ),
-              const DenisonLogo()
+              DenisonLogo()
             ],
           ),
         ),
