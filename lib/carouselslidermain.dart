@@ -4,13 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'database_manager.dart';
-import 'firestoreApi.dart';
+import 'firestore_api.dart';
 
 class CarouselSilderMain extends StatefulWidget {
   const CarouselSilderMain({
     super.key,
   });
-
   @override
   State<CarouselSilderMain> createState() => _CarouselSilderMainState();
 }
@@ -23,16 +22,16 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
           future: dbtoDart.readconf(),
           builder: (context1, snapshot1) {
             final documents = snapshot1.data?.docs ?? [];
-            int image_length;
-            if (documents.length != 0) {
-              image_length = documents[0].get('item_num');
+            int imageLength;
+            if (documents.isNotEmpty) {
+              imageLength = documents[0].get('item_num');
             } else {
-              image_length = 0;
+              imageLength = 0;
             }
 
             return FutureBuilder<List<String>>(
                 future: FireStoreDataBase().getData(
-                    image_length), // Load data from database to snapshot variable
+                    imageLength), // Load data from database to snapshot variable
                 //error:
                 //W/ProviderInstaller( 6882): Failed to load providerinstaller
                 //module: No acceptable module com.google.android.gms.providerinstaller.dynamite
@@ -59,12 +58,17 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
                           return Builder(
                             builder: (BuildContext context3) {
                               return Container(
-                                  width: MediaQuery.of(context3).size.width,
-                                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(207, 202, 2, 52)),
-                                  child: Image.network(
-                                      value[i].toString())); // get ith image
+                                width: MediaQuery.of(context3).size.width,
+                                margin: const EdgeInsets.symmetric(
+                                  horizontal: 5.0,
+                                ),
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                                child: Image.network(
+                                  value[i].toString(),
+                                ),
+                              ); // get ith image
                             },
                           );
                         }).toList(),
@@ -86,10 +90,11 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
                             builder: (BuildContext context4) {
                               return Container(
                                   width: MediaQuery.of(context4).size.width,
-                                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 5.0),
                                   decoration:
-                                      BoxDecoration(color: Colors.amber),
-                                  child: Text(
+                                      const BoxDecoration(color: Colors.amber),
+                                  child: const Text(
                                     'No image',
                                     style: TextStyle(fontSize: 16.0),
                                   ));
@@ -97,7 +102,7 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
                           );
                         }).toList(),
                         options: CarouselOptions(
-                          viewportFraction: 0.9,
+                          viewportFraction: 0.8,
                           height: 200,
                           autoPlay: true,
                         ),
