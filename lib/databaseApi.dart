@@ -1,4 +1,4 @@
-// firestore Api file (Update and Read only, need to add erase, eraseAll)
+// firebase database Api file (Update and Read only, need to add erase, eraseAll)
 
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -19,10 +19,12 @@ class DbtoDart extends ChangeNotifier {
     return dataCollection.doc(name).collection(timeslot).get();
   }
 
-  Future<QuerySnapshot> readconf() {
+  Future<QuerySnapshot> read_image_names(String title) {
     //doc().get return future<documentsnapshot>
     // data read for configuration
-    return confCollection.get(); // returns Map(item_num)
+    return FirebaseFirestore.instance
+        .collection(title)
+        .get(); // returns Map(item_num)
   }
 
   void update(String docId, String hall_name, String bld, int love_count,
