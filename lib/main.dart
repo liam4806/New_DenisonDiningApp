@@ -5,7 +5,27 @@ import 'package:helloworld/homebutton.dart';
 import 'package:helloworld/subtitlehome.dart';
 import 'package:helloworld/bottomdenisonlogo.dart';
 
-void main() => runApp(const MyApp());
+import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+import 'package:helloworld/drawerdescription.dart';
+
+import 'firestoreApi.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(); // waits for database connection
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => DbtoDart()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,6 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // Application name
       title: 'Denison Dining App',
       //App theme control by device system
@@ -33,39 +54,47 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, //Color.fromRGBO(240, 245, 249, 100),
+      backgroundColor: Colors.white,
+      /******************/
+      //     AppBar
+      /*****************/
       appBar: AppBar(
-        elevation: 2,
-        leading: const Icon(
-          //Appbar leftmost button
-          /* NEED SIDE MENU BAR TO BE UPDATED */
-          CupertinoIcons.line_horizontal_3,
-          color: Colors.black,
+        shape: const Border(
+          bottom: BorderSide(
+            color: Color(0xffb71c1c),
+            width: 2,
+          ),
         ),
+        elevation: 4,
+        automaticallyImplyLeading: false,
+        centerTitle: false,
         // The title text which will be shown on the action bar
         title: Text(
           title,
-          textAlign: TextAlign.center,
+          //textAlign: TextAlign.center,
           style: const TextStyle(
-            color: Colors.black,
+            color: Color(0xffb71c1c),
             fontFamily: 'merri',
             fontWeight: FontWeight.bold,
             fontSize: 25,
           ),
         ),
-        centerTitle: true,
-        //Appbar rightmost button
-        actions: const [
-          Icon(
-            CupertinoIcons.person_solid,
-            //**********************************/
-            //NEED AUTHENTIFICATION NEAR FUTURE
-            //*********************************/
-            color: Colors.black,
-          )
-        ],
         backgroundColor: Colors.grey[50],
+        //AppBar icon theme color setting
+        iconTheme: const IconThemeData(
+          color: Color(0xffb71c1c),
+        ),
       ),
+      //right drawer menu
+      endDrawer: Drawer(
+        child: Container(
+          alignment: Alignment.center,
+          child: Description(),
+        ),
+      ),
+      /******************/
+      //     BODY
+      /*****************/
       body: Center(
         child: SingleChildScrollView(
           child: Column(
