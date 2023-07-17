@@ -29,10 +29,13 @@ if (keystorePropertiesFile.exists()) {
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 33
+    ndkVersion flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -54,6 +57,7 @@ android {
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     signingConfigs {
@@ -83,4 +87,8 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:multidex:1.0.3' //changed
+    implementation platform('com.google.firebase:firebase-bom:31.1.1') //firebase dependency
+    implementation 'com.google.firebase:firebase-analytics'
+    
 }
