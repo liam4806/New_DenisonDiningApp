@@ -94,7 +94,7 @@ class HomeButton extends StatelessWidget {
                               Center(
                                 child: Text(
                                   buttontitle,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontFamily: "Lora",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
@@ -110,7 +110,7 @@ class HomeButton extends StatelessWidget {
                                   child: Text(
                                     buttonsubtitle,
                                     textAlign: TextAlign.center,
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontFamily: 'Lora',
                                       fontWeight: FontWeight.w100,
                                     ),
