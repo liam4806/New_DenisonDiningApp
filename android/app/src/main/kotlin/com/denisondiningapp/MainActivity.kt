@@ -1,4 +1,4 @@
-package com.denisondiningapp
+package com.weMakeApp.denisonDining
 
 import io.flutter.embedding.android.FlutterActivity
 

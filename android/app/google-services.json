@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:5334564cb53372f704cc2b",
+        "mobilesdk_app_id": "1:813079949362:android:95ccf88e0bf7087004cc2b",
         "android_client_info": {
-          "package_name": "com.example.New_DenisonDining"
+          "package_name": "com.denisondiningapp"
         }
       },
       "oauth_client": [
@@ -37,9 +37,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:0963153be66e51dd04cc2b",
+        "mobilesdk_app_id": "1:813079949362:android:8238aa90520f52f704cc2b",
         "android_client_info": {
-          "package_name": "com.example.denison_dining_app"
+          "package_name": "com.example.text"
         }
       },
       "oauth_client": [
@@ -66,154 +66,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:9f1ad84b61f0793404cc2b",
+        "mobilesdk_app_id": "1:813079949362:android:d6972f3d43dedadf04cc2b",
         "android_client_info": {
-          "package_name": "com.example.denison_dining_app2"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAAsSeJFIG2-6Pw0TDO_T5Bb1Jq4sW9oOg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:4a35d7d739040d4304cc2b",
-        "android_client_info": {
-          "package_name": "com.example.denison_dining_app_j"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAAsSeJFIG2-6Pw0TDO_T5Bb1Jq4sW9oOg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:f6bacbf8db66d86e04cc2b",
-        "android_client_info": {
-          "package_name": "com.example.firebase_bucket_list"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAAsSeJFIG2-6Pw0TDO_T5Bb1Jq4sW9oOg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:41f9a88bc4a7fc6b04cc2b",
-        "android_client_info": {
-          "package_name": "com.example.first_one"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAAsSeJFIG2-6Pw0TDO_T5Bb1Jq4sW9oOg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:cc01d1c201b1aadc04cc2b",
-        "android_client_info": {
-          "package_name": "com.example.flutter_with_database"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAAsSeJFIG2-6Pw0TDO_T5Bb1Jq4sW9oOg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "813079949362-fdbf56iu2ptpvlv2niebv8ctomurgeah.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:813079949362:android:f9e173e12c76824804cc2b",
-        "android_client_info": {
-          "package_name": "com.example.helloworld"
+          "package_name": "com.weMakeApp.denisonDining"
         }
       },
       "oauth_client": [
