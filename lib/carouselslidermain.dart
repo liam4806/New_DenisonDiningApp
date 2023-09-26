@@ -25,15 +25,15 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
           builder: (context1, snapshot1) {
             final documents = snapshot1.data?.docs ??
                 []; // returns List<QueryDocumentSnapshot<Object?>>
-            int image_length;
-            if (documents.length != 0) {
-              image_length = documents.length;
+            int imageLength;
+            if (documents.isNotEmpty) {
+              imageLength = documents.length;
             } else {
-              image_length = 0;
+              imageLength = 0;
             }
 
             return FutureBuilder<List<String>>(
-                future: FireStoreDataBase().getData(documents, image_length),
+                future: FireStoreDataBase().getData(documents, imageLength),
                 // Produce download urls with image_names from database
                 // and move them to snapshot variable
                 builder: (context2, snapshot2) {
@@ -46,17 +46,17 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
                     var value = snapshot2.data ??
                         []; // a list of image download urls taken from databaseApi.dart
 
-                    return SliderWithImages(
+                    return sliderWithImages(
                         value); // produce Carouselslider with given image download urls
                   } else {
-                    return SliderWithNoImage();
+                    return const SliderWithNoImage();
                   }
                 });
           });
     });
   }
 
-  Container SliderWithImages(List<String> value) {
+  Container sliderWithImages(List<String> value) {
     // Generate value.length number of images downloaded from each item (download url)
     // from the String list value and display them on carousel slider.
 
@@ -70,9 +70,9 @@ class _CarouselSilderMainState extends State<CarouselSilderMain> {
             builder: (BuildContext context3) {
               return Container(
                   width: MediaQuery.of(context3).size.width,
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  decoration:
-                      BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
+                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                  decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 255, 255, 255)),
                   child: Image.network(value[i].toString())); // get ith image
             },
           );
@@ -106,9 +106,9 @@ class SliderWithNoImage extends StatelessWidget {
             builder: (BuildContext context4) {
               return Container(
                   width: MediaQuery.of(context4).size.width,
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Text(
+                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                  decoration: const BoxDecoration(color: Colors.amber),
+                  child: const Text(
                     'No image',
                     style: TextStyle(fontSize: 16.0),
                   ));
