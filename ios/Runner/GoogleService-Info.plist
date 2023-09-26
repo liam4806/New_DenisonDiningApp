@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>813079949362-v4lc914pf87sutgumj9529975eqhkqs8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.813079949362-v4lc914pf87sutgumj9529975eqhkqs8</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>813079949362-00l1sjfkbskckrvahuckco5ocufh2npf.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBQQGLHjCzb4hN1RPxarTce9F2RaK0M0N0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>813079949362</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.weMakeApp.denisonDining</string>
+	<key>PROJECT_ID</key>
+	<string>bucketlistwithfirebase-21797</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bucketlistwithfirebase-21797.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:813079949362:ios:15c218cfaefd26bc04cc2b</string>
+	<key>DATABASE_URL</key>
+	<string>https://bucketlistwithfirebase-21797-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
