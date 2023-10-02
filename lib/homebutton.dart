@@ -98,6 +98,7 @@ class HomeButton extends StatelessWidget {
                                     fontFamily: "Lora",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
@@ -113,6 +114,7 @@ class HomeButton extends StatelessWidget {
                                     style: const TextStyle(
                                       fontFamily: 'Lora',
                                       fontWeight: FontWeight.w100,
+                                      color: Colors.black,
                                     ),
                                   ),
                                 ),
