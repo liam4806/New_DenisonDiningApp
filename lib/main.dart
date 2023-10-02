@@ -94,7 +94,7 @@ class MyHomePage extends StatelessWidget {
       /******************/
       //     BODY
       /*****************/
-      body: const Center(
+      body:const Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
