@@ -118,6 +118,30 @@ class Description extends StatelessWidget {
             });
           },
         ),
+        const Padding(
+          padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+        ),
+        InkWell(
+          child: const Text(
+            'youn_j1@denison.edu',
+            style: TextStyle(
+              fontFamily: 'Lora',
+              fontSize: 13,
+              color: Colors.blue,
+            ),
+          ),
+          onTap: () {
+            Clipboard.setData(
+              const ClipboardData(text: 'youn_j1@denison.edu'),
+            ).then((_) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Email Copied!'),
+                ),
+              );
+            });
+          },
+        ),
       ],
     );
   }
