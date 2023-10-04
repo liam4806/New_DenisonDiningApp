@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/webviewmodel.dart';
+import 'package:denison_dining_app/webviewmodel.dart';
 
 /// Makes Button with image and title
 class HomeButton extends StatelessWidget {
@@ -94,7 +94,7 @@ class HomeButton extends StatelessWidget {
                               Center(
                                 child: Text(
                                   buttontitle,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: "Lora",
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
@@ -110,7 +110,7 @@ class HomeButton extends StatelessWidget {
                                   child: Text(
                                     buttonsubtitle,
                                     textAlign: TextAlign.center,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontFamily: 'Lora',
                                       fontWeight: FontWeight.w100,
                                     ),
