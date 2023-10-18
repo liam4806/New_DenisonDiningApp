@@ -184,6 +184,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_widgetkit:
+    dependency: "direct main"
+    description:
+      name: flutter_widgetkit
+      sha256: "63844c74c642d5c950d34b17b40038a1ef21d4d0a65abd59a04e860f0981956d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
+  home_widget:
+    dependency: "direct main"
+    description:
+      name: home_widget
+      sha256: "9a0ed6094823b07025727a39d3dc2d3e02c5281372af22d72e611137e0b3c10d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.0"
   http:
     dependency: transitive
     description:

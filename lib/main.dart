@@ -94,7 +94,7 @@ class MyHomePage extends StatelessWidget {
       /******************/
       //     BODY
       /*****************/
-      body:const Center(
+      body: const Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -118,7 +118,7 @@ class MyHomePage extends StatelessWidget {
               ),
               HomeButton(
                 buttontitle: 'Slayters Market',
-                buttonsubtitle: 'Convenient, House made,\nBarista made Coffee',
+                buttonsubtitle: 'Convenient, House Made,\nBarista Made Coffee',
                 buttonimage: 'assets/images/slayter.jpg',
                 dininghall:
                     'https://denison.cafebonappetit.com/cafe/slayter-market/',
