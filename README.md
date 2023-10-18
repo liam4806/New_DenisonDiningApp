@@ -1,4 +1,4 @@
-# Denison Dining App ![Denison Dining App](https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/6a5e025f-c867-469e-87e7-684245027fd4 = 50x50)
+# Denison Dining App ![](https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/6a5e025f-c867-469e-87e7-684245027fd4)
 
 An App that help students check today's menu for campus dining halls. 
 Built with Flutter and Firebase.
