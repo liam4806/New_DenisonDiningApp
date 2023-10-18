@@ -23,7 +23,7 @@ This is the one of the most common questions I heard throughout my semesters on 
 
 ## Getting Started
 
-I have created a team with three friends who are on the same page I am; they wish for a more accessible menu system and have the technological interest to make it happen. We have decided create the app as both Android and iOS accessible. This is because, although the campus is apple dominated, we cannot disregard the Android user student population. Therefore, we decided to develop the ap[p with Flutter. This was great choice because it is used to develop cross platform applications from a single code base. We wanted this app to not only function as a menu app, but also an app that delivers variety of campus information. Therefore, we integrated Firebase to enable displaying campus event posters, campus map, google map, and more!
+I have created a team with three friends who are on the same page I am; they wish for a more accessible menu system and have the technological interest to make it happen. We have decided create the app as both Android and iOS accessible. This is because, although the campus is apple dominated, we cannot disregard the Android user student population. Therefore, we decided to develop the app with Flutter. This was great choice because it is used to develop cross platform applications from a single code base. We wanted this app to not only function as a menu app, but also an app that delivers variety of campus information. Therefore, we integrated Firebase to enable displaying campus event posters, campus map, google map, and more!
 
 ## Usage
 
