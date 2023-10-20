@@ -1,47 +1,21 @@
 import WidgetKit
 import SwiftUI
-
-func isHuffmanHallOpenNow(currentDate:Date) -> Bool {
-    let currentDay = Calendar.current.component(.weekday, from: currentDate) //getting day Sun=1 .... Sat=7
-    let currentTime = Calendar.current.component(.hour, from: currentDate) * 60 + Calendar.current.component(.minute, from: currentDate) //make time into minutes ex)12:30 -> 12*60+30 = 750
-    switch currentDay {
-    case 1: // Sunday
-        if (7*60+59...14*60+29).contains(currentTime) || (16*60+59...20*60+59).contains(currentTime) {
-            return true
-        }
-    case 2...5: // Monday, Tuesday, Wednesday, Thursday
-        if (7*60+29...10*60+29).contains(currentTime) || (11*60+29...13*60+59).contains(currentTime) || (16*60+59...20*60+59).contains(currentTime) {
-            return true
-        }
-    case 6: // Friday
-        if (7*60+29...10*60+29).contains(currentTime) || (11*60+29...13*60+59).contains(currentTime) || (16*60+59...19*60+59).contains(currentTime) {
-            return true
-        }
-    case 7: // Saturday
-        if (7*60+59...14*60+29).contains(currentTime) || (16*60+59...19*60+29).contains(currentTime) {
-            return true
-        }
-    default:
-        return false
-    }
-
-    return false
-}
+import Foundation
 
 func isCurtisHallOpenNow(currentDate:Date) -> Bool {
     let currentDay = Calendar.current.component(.weekday, from: currentDate)
     let currentTime = Calendar.current.component(.hour, from: currentDate) * 60 + Calendar.current.component(.minute, from: currentDate)
     switch currentDay {
     case 1: // Sunday
-        if (7*60+59...14*60+29).contains(currentTime) || (16*60+29...19*60+59).contains(currentTime) {
+        if (7*60+55...14*60+25).contains(currentTime) || (16*60+25...19*60+55).contains(currentTime) {
             return true
         }
     case 2...6: // Week
-        if (7*60+29...10*60+29).contains(currentTime) || (10*60+59...14*60+29).contains(currentTime) || (16*60+29...19*60+59).contains(currentTime) {
+        if (7*60+25...10*60+25).contains(currentTime) || (10*60+55...14*60+25).contains(currentTime) || (16*60+25...19*60+55).contains(currentTime) {
             return true
         }
     case 7: // Saturday
-        if (7*60+59...14*60+29).contains(currentTime) || (16*60+29...18*60+59).contains(currentTime) {
+        if (7*60+55...14*60+25).contains(currentTime) || (16*60+25...18*60+55).contains(currentTime) {
             return true
         }
 
@@ -51,20 +25,49 @@ func isCurtisHallOpenNow(currentDate:Date) -> Bool {
 
     return false
 }
+
+func isHuffmanHallOpenNow(currentDate:Date) -> Bool {
+    let currentDay = Calendar.current.component(.weekday, from: currentDate) //getting day Sun=1 .... Sat=7
+    let currentTime = Calendar.current.component(.hour, from: currentDate) * 60 + Calendar.current.component(.minute, from: currentDate) //make time into minutes ex)12:30 -> 12*60+30 = 750
+    switch currentDay {
+    case 1: // Sunday
+        if (7*60+55...14*60+25).contains(currentTime) || (16*60+55...20*60+55).contains(currentTime) {
+            return true
+        }
+    case 2...5: // Monday, Tuesday, Wednesday, Thursday
+        if (7*60+25...10*60+25).contains(currentTime) || (11*60+25...13*60+55).contains(currentTime) || (16*60+55...20*60+55).contains(currentTime) {
+            return true
+        }
+    case 6: // Friday
+        if (7*60+25...10*60+25).contains(currentTime) || (11*60+25...13*60+55).contains(currentTime) || (16*60+55...19*60+55).contains(currentTime) {
+            return true
+        }
+    case 7: // Saturday
+        if (7*60+55...14*60+25).contains(currentTime) || (16*60+55...19*60+25).contains(currentTime) {
+            return true
+        }
+    default:
+        return false
+    }
+
+    return false
+}
+
+
 func isSlayterOpenNow(currentDate:Date) -> Bool {
     let currentDay = Calendar.current.component(.weekday, from: currentDate)
     let currentTime = Calendar.current.component(.hour, from: currentDate) * 60 + Calendar.current.component(.minute, from: currentDate)
     switch currentDay {
     case 1: // Sunday
-        if (11*60+59...21*60+59).contains(currentTime){
+        if (11*60+55...21*60+55).contains(currentTime){
             return true
         }
     case 2...6: // Week
-        if (6*60+59...10*60+29).contains(currentTime) || (11*60+04...21*60+59).contains(currentTime) {
+        if (6*60+55...10*60+25).contains(currentTime) || (11*60+00...21*60+55).contains(currentTime) {
             return true
         }
     case 7: // Saturday
-        if (11*60+59...21*60+59).contains(currentTime) {
+        if (11*60+55...21*60+55).contains(currentTime) {
             return true
         }
     default:
@@ -73,7 +76,12 @@ func isSlayterOpenNow(currentDate:Date) -> Bool {
 
     return false
 }
-
+func getDateString(currentDate:Date)-> Text{
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd MMM"
+    let dateString = dateFormatter.string(from: currentDate)
+    return Text(dateString)
+}
 struct dininghallEntry: TimelineEntry {
     let date: Date
     let statusH: Bool //Huffman Status
@@ -136,33 +144,72 @@ struct dininghallView: View {
     var Back : Color {
         colorScheme == .dark ? .black : .white
     }
+    let image = Image("applogo")
+    
     var body: some View {
-        ZStack {
-            HStack{
-                VStack(spacing:10){
-                    if entry.statusH == true {
-                        Circle().foregroundColor(Color.green)
-                    } else {
-                        Circle().foregroundColor(Color.red)
-                    }
-                    if entry.statusC == true {
-                        Circle().foregroundColor(Color.green)
-                    } else {
-                        Circle().foregroundColor(Color.red)
-                    }
-                    if entry.statusS == true {
-                        Circle().foregroundColor(Color.green)
-                    } else {
-                        Circle().foregroundColor(Color.red)
-                    }
-                }.frame(minWidth:50,maxWidth: 50, minHeight: 80, maxHeight:80)
-                VStack(spacing:10){
-                    Text("Huffman").foregroundStyle(fontColor)
-                    Text("Curtis").foregroundStyle(fontColor)
-                    Text("Slayter").foregroundStyle(fontColor)
-                }.padding()
-            }
-        }.widgetBackground(Back)
+        let currentDate = Date()
+        ZStack(alignment: .center){
+                HStack{
+                    VStack(alignment: .leading,spacing:10){
+                        Spacer()
+                        HStack{
+                            VStack(alignment: .leading){
+                                image.resizable().frame(maxWidth: 40, maxHeight: 50)
+                            }.padding(-10)
+                            Spacer().frame(width: 25)
+                            VStack(alignment: .leading){
+                                Text("Today")
+                                  .font(.system(size: 17)
+                                      .weight(.bold)).foregroundColor(fontColor)
+                                getDateString(currentDate: currentDate)
+                                  .font(.system(size: 12))
+                                  .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5))
+                            }
+                        }
+                        Spacer().frame(height: 1)
+                        VStack(alignment: .leading, spacing:6){
+                            HStack{
+                                Spacer().frame(width: 15)
+                                if entry.statusC == true {
+                                    Circle().frame(width: 15, height: 15).foregroundColor(Color.green)
+                                } else {
+                                    Circle().frame(width: 15, height: 15).foregroundColor(Color.red)
+                                }
+                                Spacer().frame(width: 15)
+                                Text("Curtis")
+                                    .font(.system(size: 14))
+                                  .foregroundColor(fontColor)
+                            }
+                            HStack{
+                                Spacer().frame(width: 15)
+                                if entry.statusH == true {
+                                    Circle().frame(width: 15, height: 15).foregroundColor(Color.green)
+                                } else {
+                                    Circle().frame(width: 15, height: 15).foregroundColor(Color.red)
+                                }
+                                Spacer().frame(width: 15)
+                                Text("Huffman")
+                                    .font(.system(size: 14))
+                                  .foregroundColor(fontColor)
+                            }
+                            HStack{
+                                Spacer().frame(width: 15)
+                                if entry.statusS == true {
+                                    Circle().frame(width: 15, height: 15).foregroundColor(Color.green)
+                                } else {
+                                    Circle().frame(width: 15, height: 15).foregroundColor(Color.red)
+                                }
+                                Spacer().frame(width: 15)
+                                Text("Slayter")
+                                    .font(.system(size: 14))
+                                  .foregroundColor(fontColor)
+                            }
+                        }
+                        Spacer()
+                    }.padding(-15).frame(minWidth: 70)
+                }
+        }.frame(width: 155, height: 155)
+            .cornerRadius(21.67).widgetBackground(Back)
     }
 }
 //This is for iOS 17 containerBackground API and to make it work below iOS17.
@@ -174,6 +221,15 @@ extension View {
             }
         } else {
             return background(backgroundView)
+        }
+    }
+}
+struct Widget_Previews: PreviewProvider {
+    static var previews: some View {
+        let currentDate = Date()
+        Group {
+            dininghallView(entry: dininghallEntry(date: currentDate, statusH: isHuffmanHallOpenNow(currentDate:currentDate),statusC: isCurtisHallOpenNow(currentDate:currentDate),statusS: isSlayterOpenNow(currentDate:currentDate)))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
         }
     }
 }
