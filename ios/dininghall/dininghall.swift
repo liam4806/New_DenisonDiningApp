@@ -418,7 +418,7 @@ struct dininghallView: View {
                     }
                     
                 }
-            }.widgetBackground(Back)
+            }.widgetBackground(Back).padding()
         default:
             Text("Default")
         }
