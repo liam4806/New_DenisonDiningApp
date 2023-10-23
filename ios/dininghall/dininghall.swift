@@ -90,19 +90,19 @@ func whatTimeisit(currentDate:Date) -> Array<String>{
     switch currentDay {
     case 1: // Sunday
         if (0...14*60+30).contains(currentTime){
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("12:00AM - 10:00PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("12:00 AM - 10:00 PM")
         }
         else if (14*60+25...22*60+0).contains(currentTime) {
-            timeslot.append("04:30PM - 08:00PM")
-            timeslot.append("05:00PM - 09:00PM")
-            timeslot.append("12:00PM - 10:00PM")
+            timeslot.append("04:30 PM - 08:00 PM")
+            timeslot.append("05:00 PM - 09:00 PM")
+            timeslot.append("12:00 PM - 10:00 PM")
         }
         else if (21*60+59...23*60+59).contains(currentTime){
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:00AM - 10:30AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:00 AM - 10:30 AM")
         }
         else {
             timeslot.append("Will get updated soon")
@@ -111,24 +111,24 @@ func whatTimeisit(currentDate:Date) -> Array<String>{
         }
     case 2...5: // Monday, Tuesday, Wednesday, Thursday
         if (0...10*60+30).contains(currentTime){ //breakfast
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:00AM - 10:30AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:00 AM - 10:30 AM")
         }
         else if(10*60+25...14*60+30).contains(currentTime) { //lunch time
-            timeslot.append("11:00AM - 02:30PM")
-            timeslot.append("11:30AM - 02:00PM")
-            timeslot.append("11:05AM - 10:00PM")
+            timeslot.append("11:00 AM - 02:30 PM")
+            timeslot.append("11:30 AM - 02:00 PM")
+            timeslot.append("11:05 AM - 10:00 PM")
         }
         else if (14*60+30...22*60+0).contains(currentTime) { //dinner time
-            timeslot.append("04:30PM - 08:00PM")
-            timeslot.append("05:00PM - 09:00PM")
-            timeslot.append("11:05AM - 10:00PM")
+            timeslot.append("04:30 PM - 08:00 PM")
+            timeslot.append("05:00 PM - 09:00 PM")
+            timeslot.append("11:05 AM - 10:00 PM")
         }
         else if (22*60+0...23*59+59).contains(currentTime){
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:00AM - 10:30AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:00 AM - 10:30 AM")
         }
         else{
             timeslot.append("Will get updated soon")
@@ -137,24 +137,24 @@ func whatTimeisit(currentDate:Date) -> Array<String>{
         }
     case 6: // Friday
         if (0...10*60+30).contains(currentTime) {
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:30AM - 10:30AM")
-            timeslot.append("07:00AM - 10:30AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:30 AM - 10:30 AM")
+            timeslot.append("07:00 AM - 10:30 AM")
         }
         else if (10*60+25...14*60+30).contains(currentTime){
-            timeslot.append("11:00AM - 02:30PM")
-            timeslot.append("11:30AM - 02:00PM")
-            timeslot.append("11:05AM - 10:00PM")
+            timeslot.append("11:00 AM - 02:30 PM")
+            timeslot.append("11:30 AM - 02:00 PM")
+            timeslot.append("11:05 AM - 10:00 PM")
         }
         else if (14*60+25...21*60+59).contains(currentTime) {
-            timeslot.append("04:30PM - 08:00PM")
-            timeslot.append("05:00PM - 08:00PM")
-            timeslot.append("11:05AM - 10:00PM")
+            timeslot.append("04:30 PM - 08:00 PM")
+            timeslot.append("05:00 PM - 08:00 PM")
+            timeslot.append("11:05 AM - 10:00 PM")
         }
         else if (21*60+59...23*60+59).contains(currentTime) {
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("12:00AM - 10:00PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("12:00 AM - 10:00 PM")
         }
         else{
             timeslot.append("Will get updated soon")
@@ -163,19 +163,19 @@ func whatTimeisit(currentDate:Date) -> Array<String>{
         }
     case 7: // Saturday
         if (0...14*60+30).contains(currentTime){
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("12:00AM - 10:00PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("12:00 AM - 10:00 PM")
         }
         else if (14*60+25...19*60+30).contains(currentTime) {
-            timeslot.append("04:30PM - 07:00PM")
-            timeslot.append("05:00PM - 07:30PM")
-            timeslot.append("12:00PM - 10:00PM")
+            timeslot.append("04:30 PM - 07:00 PM")
+            timeslot.append("05:00 PM - 07:30 PM")
+            timeslot.append("12:00 PM - 10:00 PM")
         }
         else if (19*60+30...23*60+59).contains(currentTime) {
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("08:00AM - 02:30PM")
-            timeslot.append("12:00AM - 10:00PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("08:00 AM - 02:30 PM")
+            timeslot.append("12:00 AM - 10:00 PM")
         }
         else {
             timeslot.append("Will get updated soon")
