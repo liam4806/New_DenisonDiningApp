@@ -329,11 +329,11 @@ struct dininghallView: View {
                     HStack{
                         VStack(alignment: .leading){
                             Text("Curtis")
-                                .font(.system(size: 17)
+                                .font(.system(size: 15)
                                   .weight(.bold)
                                 ).foregroundColor(fontColor)
                             Text(CurtisT)
-                                .font(.system(size: 13))
+                                .font(.system(size: 12))
                               .foregroundColor(Color(red: 0.64, green: 0.64, blue: 0.66))
                         }
                         Spacer()
@@ -361,11 +361,11 @@ struct dininghallView: View {
                     HStack{
                         VStack(alignment: .leading){
                             Text("Huffman")
-                                .font(.system(size: 17)
+                                .font(.system(size: 15)
                                   .weight(.bold)
                                 ).foregroundColor(fontColor)
                             Text(HuffmanT)
-                                .font(.system(size: 13))
+                                .font(.system(size: 12))
                               .foregroundColor(Color(red: 0.64, green: 0.64, blue: 0.66))
                         }
                         Spacer()
@@ -392,11 +392,11 @@ struct dininghallView: View {
                     HStack{
                         VStack(alignment: .leading){
                             Text("Slayter")
-                                .font(.system(size: 17)
+                                .font(.system(size: 15)
                                   .weight(.bold)
                                 ).foregroundColor(fontColor)
                             Text(SlayterT)
-                                .font(.system(size: 13))
+                                .font(.system(size: 12))
                               .foregroundColor(Color(red: 0.64, green: 0.64, blue: 0.66))
                         }
                         Spacer()
