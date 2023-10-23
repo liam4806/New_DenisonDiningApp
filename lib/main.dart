@@ -117,7 +117,7 @@ class MyHomePage extends StatelessWidget {
                     'https://denison.cafebonappetit.com/cafe/huffman-cafe/',
               ),
               HomeButton(
-                buttontitle: 'Slayters Market',
+                buttontitle: 'Slayter Market',
                 buttonsubtitle: 'Convenient, House Made,\nBarista Made Coffee',
                 buttonimage: 'assets/images/slayter.jpg',
                 dininghall:
