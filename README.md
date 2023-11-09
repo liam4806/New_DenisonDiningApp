@@ -8,7 +8,7 @@ Built with Flutter and Firebase.
 
 That is our first rule!
 
-[![AppStore](https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/9b87dee1-bfb0-4978-9416-105a621fa924)(https://apps.apple.com/us/app/denison-dining/id6468892325)]
+[![AppStore](https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/9b87dee1-bfb0-4978-9416-105a621fa924)](https://apps.apple.com/us/app/denison-dining/id6468892325)
 
 
 <a href="https://play.google.com/store/apps/details?id=com.weMakeApp.denisonDining">
