@@ -8,9 +8,8 @@ Built with Flutter and Firebase.
 
 That is our first rule!
 
-<a href="https://apps.apple.com/us/app/denison-dining/id6468892325">
-  <img src="https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/9b87dee1-bfb0-4978-9416-105a621fa924" alt="App Store" height="60" >
-</a>
+[![AppStore]([http://cfile24.uf.tistory.com/image/2444873B57E257821FA2AE](https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/9b87dee1-bfb0-4978-9416-105a621fa924))]([https://unity3d.com/kr](https://apps.apple.com/us/app/denison-dining/id6468892325))
+
 <a href="https://play.google.com/store/apps/details?id=com.weMakeApp.denisonDining">
   <img src="https://github.com/NuriHyun03/New_DenisonDining/assets/106914387/f9aab28e-32e9-4c52-aab5-a30590199dc3" alt="Google Play Store" height="70">
 </a>
