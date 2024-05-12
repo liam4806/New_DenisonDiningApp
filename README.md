@@ -2,7 +2,7 @@
 
 An App that help students check today's menu for campus dining halls. 
 Built with Flutter and Firebase.
-
+--May 2024 Service closed
 
 > Simple and Easy to Use to Anyone.
 
