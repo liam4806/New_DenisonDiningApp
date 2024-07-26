@@ -7,7 +7,7 @@ Built with Flutter and Firebase.
 ![denison_dining](https://github.com/user-attachments/assets/ecc1749d-e002-4491-8c2a-a7b4dc55fc86)
 
 
-# By May 2024 Service closed
+# ------ By May 2024 Service closed ------
 
 > Simple and Easy to Use to Anyone.
 
